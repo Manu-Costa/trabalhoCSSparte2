@@ -1,0 +1,131 @@
+
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* HEADER */
+
+
+header {
+    /* Seleciona a parte do cabeçalho, onde ficam o logo e o menu */
+    display: flex;
+    /* Ativa o flexbox para alinhar os elementos (logo e menu) lado a lado na horizontal */
+    align-items: center;
+    /* Centraliza verticalmente os elementos dentro do cabeçalho */
+    padding: 20px 4%;
+    /* Cria um espaço interno de 20px no topo/base e 4% nas laterais esquerda/direita */
+    position: sticky;
+    /* Faz com que o cabeçalho "grude" na tela ao rolar a página para baixo */
+    top: 0;
+    /* Diz para o cabeçalho grudar exatamente no topo (0 pixels de distância) da tela */
+    z-index: 100;
+    /* Garante que o cabeçalho fique por cima de todas as imagens e não seja sobreposto por elas */
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, black 20%, rgba(0, 0, 0, 0));
+}
+
+nav ul {
+    /* Seleciona a lista (ul) que está dentro da navegação (nav) */
+    display: flex;
+    /* Ativa o flexbox para colocar os itens da lista lado a lado */
+    list-style: none;
+    /* Remove aquelas bolinhas ou números padrão de listas do HTML */
+    gap: 20px;
+    /* Cria um espaço vazio (buraco) de 20px entre cada item do menu */
+}
+
+nav a {
+    /* Seleciona os links clicáveis (a) dentro do menu */
+    color: #e5e5e5;
+    /* Define a cor do texto do link como um cinza claro */
+    text-decoration: none;
+    /* Remove o sublinhado padrão que os links costumam ter */
+    transition: color 0.3s ease;
+    /* Prepara o link para mudar de cor de forma suave, levando 0.3 segundos */
+}
+
+nav a:hover {
+    color: #ee1b1b;
+}
+
+.sobre{
+    padding: 5em 10em;
+} 
+.sobre h1{
+    color: #d61515;
+    cursor: context-menu;
+}
+.sobre h1:hover{
+    color: #920b0b;
+    transition: 0.3s;
+    transform: scale(1.02);
+}
+
+.subtitulo{
+    color: #d4d4d4;
+    margin-bottom: 2em;
+    font-size:large;
+    cursor: context-menu;
+}
+
+.sobre-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.sobre-card h2{
+    color: #d61515;
+    cursor: context-menu;
+}
+
+.sobre-card p{
+    color: #d4d4d4 ;
+    cursor: context-menu;
+}
+.sobre-cards h2:hover{
+    color: #6e1616;
+    transition: 0.3s;
+}
+
+.sobre-card{
+    background-color: #252525;
+    border-radius: 2em;
+    padding: 1em 2em;
+}
+
+.sobre-card:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/*FOOTER*/
+
+.footer {
+    padding: 2%;
+    text-align: center;
+    background-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0));
+    margin-top: 40px;
+    cursor: context-menu;
+}
+
+.social {
+    display: grid;
+    grid-auto-flow: column;     /* Coloca cada link em uma coluna lado a lado */
+    justify-content: center;    /* Centraliza todas as colunas no meio da tela */
+    gap: 2rem;                  /* Espaço entre cada link de rede social */
+    margin-top: 2%;
+}
+
+.social a {
+    color: #999;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #d61515;
+    transition: 0.3s;
+}
+
